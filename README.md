@@ -188,7 +188,7 @@ sudo docker-compose run --rm stack is-db create-oauth-client \
 ***
 - Iniciar los servicios:
 ```
-docker compose up -d
+sudo docker-compose up
 ```
 
 **Nota**: *Esperar a que los 3 dockers esten corriendo, el docker stack demora un minuto en activarse bien.*
