@@ -3,6 +3,11 @@ Notas para levantar un servidor local "The Things Nwetwork"
 
 ## Pasos para crear un servidor local de The Things Stack con certificados autofirmados.
 
+**Nota**: Antes de comenzar revisar que no haya ningun servicio utilizando puertos que vamos a necesitar, como por ejemplo que no este mosquitto corriendo como systemctl, o telegraf formateando protocolos mqtt y realizando publicaciones, o tambien node-red. Si alguno se tiene corriendo en la pc host, finalizarlos con:
+```
+sudo systemctl stop (nombre del servicio)
+```
+
 ### 1. Instalar `cfssl`:
 
 * Descargar el archivo binario:
@@ -373,10 +378,7 @@ sudo docker-compose run --rm stack is-db create-oauth-client \
   --logout-redirect-uri "${LOGOUT_REDIRECT_URI}" \
   --logout-redirect-uri "${LOGOUT_REDIRECT_PATH}"
 ```
-(Opcional) Crear cliente OAuth CLI (para gestionar desde consola y no desde interfaz web):
-```
-docker compose run --rm stack is-db create-oauth-client --id cli --name "Command Line Interface" --owner admin --no-secret --redirect-uri "local-callback" --redirect-uri "code"
-```
+
 Iniciar los servicios:
 ```
 docker compose up -d
