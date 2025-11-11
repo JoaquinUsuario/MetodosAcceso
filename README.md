@@ -325,7 +325,53 @@ sudo docker-compose run --rm stack is-db create-admin-user --id admin --email ad
 Crear el cliente OAuth:
 
 ```
-sudo docker-compose run --rm stack is-db create-oauth-client --id console --name "Console" --owner admin --no-secret --redirect-uri "https://192.168.100.9/console/oauth/callback" --redirect-uri "/console/oauth/callback"
+docker compose run --rm stack is-db create-oauth-client \
+  --id cli \
+  --name "Command Line Interface" \
+  --owner admin \
+  --no-secret \
+  --redirect-uri "local-callback" \
+  --redirect-uri "code"
+```
+Crear un cliente OAuth para la consola (reemplace con su SERVER_ADDRESSY Consola CLIENT_SECRET):
+```
+SERVER_ADDRESS=https://192.168.100.9
+ID=console
+NAME=Console
+CLIENT_SECRET=console
+REDIRECT_URI=${SERVER_ADDRESS}/console/oauth/callback
+REDIRECT_PATH=/console/oauth/callback
+LOGOUT_REDIRECT_URI=${SERVER_ADDRESS}/console
+LOGOUT_REDIRECT_PATH=/console
+sudo docker-compose run --rm stack is-db create-oauth-client \
+  --id ${ID} \
+  --name "${NAME}" \
+  --owner admin \
+  --secret "${CLIENT_SECRET}" \
+  --redirect-uri "${REDIRECT_URI}" \
+  --redirect-uri "${REDIRECT_PATH}" \
+  --logout-redirect-uri "${LOGOUT_REDIRECT_URI}" \
+  --logout-redirect-uri "${LOGOUT_REDIRECT_PATH}"
+```
+Y luego para el NOC (reemplace con su SERVER_ADDRESSY NOC CLIENT_SECRET):
+```
+SERVER_ADDRESS=https://192.168.100.9
+ID=noc
+NAME="Network Operations Center"
+CLIENT_SECRET=noc
+REDIRECT_URI=${SERVER_ADDRESS}/noc/oauth/callback
+REDIRECT_PATH=/noc/oauth/callback
+LOGOUT_REDIRECT_URI=${SERVER_ADDRESS}/noc
+LOGOUT_REDIRECT_PATH=/noc
+sudo docker-compose run --rm stack is-db create-oauth-client \
+  --id ${ID} \
+  --name "${NAME}" \
+  --owner admin \
+  --secret "${CLIENT_SECRET}" \
+  --redirect-uri "${REDIRECT_URI}" \
+  --redirect-uri "${REDIRECT_PATH}" \
+  --logout-redirect-uri "${LOGOUT_REDIRECT_URI}" \
+  --logout-redirect-uri "${LOGOUT_REDIRECT_PATH}"
 ```
 (Opcional) Crear cliente OAuth CLI (para gestionar desde consola y no desde interfaz web):
 ```
