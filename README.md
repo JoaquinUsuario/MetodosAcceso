@@ -118,6 +118,8 @@ Crear el usuario admin:
 ```
 sudo docker-compose run --rm stack is-db create-admin-user --id admin --email admin@192.168.100.9
 ```
+**Nota**: No toma todas las contraseñas, `Admin1` la toma bien. Usar alguna parecida o esa misma.
+
 Crear el cliente OAuth:
 
 ```
@@ -174,3 +176,9 @@ Iniciar los servicios:
 ```
 docker compose up -d
 ```
+
+Una vez hecho todo esto debería estar funcionando bien el servidor localmente en docker. Entrar al navegador Web y dirigirse a la url:
+
+`https://[ip-de-la-pc-host]/console`
+
+Va a mostrar que la página no es segura, permitir en configuración avanzada. Una vez en la interfaz web de TTN, poner como usuario `admin` y la contraseña que se escribió, por ejemplo `Admin1`.
