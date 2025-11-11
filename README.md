@@ -8,6 +8,10 @@ Notas para levantar un servidor local "The Things Network"
 sudo systemctl stop (nombre del servicio)
 ```
 
+```
+sudo systemctl disable (nombre del servicio)
+```
+
 ### 1. Instalar `cfssl`:
 
 * Descargar el archivo binario:
