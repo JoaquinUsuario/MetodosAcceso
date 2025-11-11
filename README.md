@@ -1,9 +1,9 @@
 # MetodosAcceso
-Notas para levantar un servidor local "The Things Nwetwork"
+Notas para levantar un servidor local "The Things Network"
 
 ## Pasos para crear un servidor local de The Things Stack con certificados autofirmados.
 
-**Nota**: Antes de comenzar revisar que no haya ningun servicio utilizando puertos que vamos a necesitar, como por ejemplo que no este mosquitto corriendo como systemctl, o telegraf formateando protocolos mqtt y realizando publicaciones, o tambien node-red. Si alguno se tiene corriendo en la pc host, finalizarlos con:
+**Nota**: Antes de comenzar revisar que no haya ningun servicio utilizando puertos que vamos a necesitar, como por ejemplo que no este mosquitto corriendo como systemctl, o telegraf formateando protocolos mqtt y realizando publicaciones (ya que las va q querer recibir el servidor de TTN y va a dar error por el nombre id de la aplicacion), o tambien node-red. Si alguno se tiene corriendo en la pc host, finalizarlos con:
 ```
 sudo systemctl stop (nombre del servicio)
 ```
@@ -31,7 +31,7 @@ cfssl version
 
 ### 2. Descargar los dos archivos `.yml` de la [página web:](https://www.thethingsindustries.com/docs/enterprise/docker/configuration/)
 
-### 3. Configurarlos así:
+### 3. Configurarlos así (o directamente bajar estos dos):
 
 `docker-compose.yml`: [ver documento](archivos/docker-compose.yml)
 
