@@ -3,7 +3,7 @@ Notas para levantar un servidor local "The Things Network"
 
 ## Pasos para crear un servidor local de The Things Stack con certificados autofirmados.
 
-**Nota**: *Antes de comenzar revisar que no haya ningun servicio utilizando puertos que vamos a necesitar, como por ejemplo que no este mosquitto corriendo como systemctl, o telegraf formateando protocolos mqtt y realizando publicaciones (ya que las va q querer recibir el servidor de TTN y va a dar error por el nombre id de la aplicacion), o tambien node-red. Si alguno se tiene corriendo en la pc host, finalizarlos con:*
+**Nota**: *Antes de comenzar revisar que no haya ningun servicio utilizando puertos que vamos a necesitar, como por ejemplo que no este mosquitto corriendo como systemctl, o telegraf formateando protocolos y realizando publicaciones mqtt (ya que las va q querer recibir el servidor de TTN y va a dar error por el nombre id de la aplicacion), o tambien node-red. Si alguno se tiene corriendo en la pc host, finalizarlos con:*
 ```
 sudo systemctl stop (nombre del servicio)
 ```
