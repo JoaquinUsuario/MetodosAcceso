@@ -9,7 +9,7 @@ Darle cualquier nonbre y crearla.
 Ir a register end device, seleccionar `"Enter end device specifics manually"`, elegir el plan de frecuencia **"AU915-928 FSB 2"**.  
 El firmware del equipo tiene la versión 1.0.5 para lorawan, asique en el server TTN hay que selccionar **"LoRaWAN version 1.0.2" y "RP001 ... revision B"**.\
 En `"JoinEUI"` poner un valor cualquiera como por ejemplo: "70B3D57ED0000000".\
-En `"DevEUI"` poner el código que corresponde al nodo (cada equipo tiene su propio DevEUI). En el esp que se probó el valor es **0004A30B0021DC0F**.\
+En `"DevEUI"` poner el código que corresponde al nodo (cada equipo tiene su propio DevEUI). En el esp que se probó el valor es **0004A30B00######**.\
 Generar una `"APPKey"` desde la propia página de TTN, guardar estos tres códigos porque los vamos a necesitar en el programa que compilemos con Arduino IDE.\
 Darle un nombre cualquiera (respetando el formato de TTN) y darle a `"Register end device"`.
 Con esto el nodo ya estáregistrado, ahora solo falta compilar el código en el ESP32 para que comience a comunicarse con el gateway.
