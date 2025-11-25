@@ -8,6 +8,9 @@
 
 [github](https://github.com/RAKWireless/RAK811_BreakBoard)
 
+
+[github PiSupply](https://github.com/PiSupply/RAK811/blob/master/Application%20Notes/How%C2%A0To%C2%A0Connect%C2%A0Lora%C2%A0RAK811%C2%A0to%C2%A0The%20Things%20Network.pdf)
+
 [Comandos_AT](https://galopago.github.io/assets/pdf/RAK811_AT_Command_Manual_V1.0.pdf)
 
 ***
