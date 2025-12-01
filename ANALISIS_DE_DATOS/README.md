@@ -18,3 +18,8 @@ En este caso las siguientes líneas representan estos datos:
     - 67: Tipo de dato (103 en decimal, que corresponde a temperatura).
     - 00E1: Valor (225 en decimal, dividido por 10 según el estándar CayenneLPP) = 22.5 °C.
 
+### Fuentes:
+
+[Frequency plan](https://www-thethingsnetwork-org.translate.goog/docs/lorawan/frequency-plans/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc)
+
+[Regional parameters](https://lora-alliance.org/wp-content/uploads/2020/11/lorawan_regional_parameters_v1.0.2_final_1944_1.pdf)
