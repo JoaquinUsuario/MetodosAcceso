@@ -1,3 +1,5 @@
+### Mensajes que llegaron a enviarse correctamente:
+
 Los mensajes "Forward uplink data messaje" son los que llevan información del nodo. 
 En este caso las siguientes líneas representan estos datos:
 ```bash
@@ -17,6 +19,10 @@ En este caso las siguientes líneas representan estos datos:
     - 01: Canal 1 (sensor 1).
     - 67: Tipo de dato (103 en decimal, que corresponde a temperatura).
     - 00E1: Valor (225 en decimal, dividido por 10 según el estándar CayenneLPP) = 22.5 °C.
+
+**Nota**: *Cada 5 o 6 mensajes enviados correctamente, se corta la comunicación y el nodo no llega más al Gateway. Una causa posible es que el nodo o el Gateway estén utilizando un plan de frecuencias o sub bandas equivocadas. En principio TTN soporta la sub banda 2, o FSB2.*
+
+*Otra posible causa es el AdrLink, revisar bien cómo funciona esto*
 
 ### Fuentes:
 
