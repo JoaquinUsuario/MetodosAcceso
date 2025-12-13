@@ -22,7 +22,15 @@ En este caso las siguientes líneas representan estos datos:
 
 **Nota**: *Cada 5 o 6 mensajes enviados correctamente, se corta la comunicación y el nodo no llega más al Gateway. Una causa posible es que el nodo o el Gateway estén utilizando un plan de frecuencias o sub bandas equivocadas. En principio TTN soporta la sub banda 2, o FSB2.*
 
-*Otra posible causa es el AdrLink, revisar bien cómo funciona esto*
+*Otra posible causa es el AdrLink, en los downlink se puede ver como el server le manda al nodo un `AdrReq` pero no recibe un `AdrAns`, es decir el nodo lo ignora porque no tiene activado el Adr, por defecto viene desactivado.*
+
+*Revisar que se cumpla el duty cycle y que eso no este bloqueando el nodo.*
+
+*Resvisar los logs desde el gateway.*
+
+[Soluciones a errores de TTN](https://www.thethingsindustries.com/docs/hardware/devices/troubleshooting/)
+
+***
 
 ### Canales Uplinks AU915-928 de 125KHz (separación de 200KHz):
 | Channel ID | Frequency (MHz) | Sub-band | |
